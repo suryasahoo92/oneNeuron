@@ -20,7 +20,7 @@ def save_model(model, filename):
   filePath = os.path.join(model_dir, filename) # model/filename
   joblib.dump(model, filePath)
 
-  def save_plot(df, file_name, model):
+def save_plot(df, file_name, model):
   def _create_base_plot(df):
     df.plot(kind="scatter", x="x1", y="x2", c="y", s=100, cmap="winter")
     plt.axhline(y=0, color="black", linestyle="--", linewidth=1)
